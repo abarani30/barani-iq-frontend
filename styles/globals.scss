@@ -1,0 +1,744 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: whitesmoke !important;
+
+  @media screen and (max-width: 599px) {
+    overflow-x: hidden;
+  }
+}
+
+li a {
+  color: #222 !important;
+  font-size: 14px;
+}
+
+li a:hover {
+  color: rgb(53, 108, 226) !important;
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  padding-top: 20px;
+  max-width: 1200px;
+  margin: auto;
+
+  @media screen and (max-width: 599px) {
+    padding-top: 10px;
+    width: 100%;
+    overflow: hidden;
+    margin: 3px;
+  }
+
+  .registerContainer {
+    height: 100vh;
+    @include center;
+
+    @media screen and (max-width: 599px) {
+      width: 100%;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+  }
+
+  .right-side {
+    background-color: white;
+    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1);
+    width: 27%;
+    height: 80%;
+    @include center;
+
+    @media screen and (max-width: 599px) {
+      width: 100%;
+      margin: 0;
+      height: 100vh;
+    }
+
+    div {
+      h1 {
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      label {
+        padding-left: 5px;
+        color: #999;
+      }
+    }
+
+    #register {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 20px;
+      padding: 10px 0px;
+
+      @media screen and (max-width: 599px) {
+        padding: 0;
+      }
+
+      h2 {
+        padding-bottom: 20px;
+        font-size: 18px;
+      }
+
+      .ant-row,
+      .ant-form-item,
+      .ant-form-item-has-success {
+        width: 430px;
+        font-size: 16px;
+
+        @media screen and (max-width: 599px) {
+          width: 87%;
+        }
+      }
+
+      .ant-form-item {
+        margin-bottom: 10px !important;
+        border-radius: 25px !important;
+
+        .ant-col,
+        .ant-form-item-control,
+        .ant-col-xs-24,
+        .ant-col-sm-16 {
+          width: 100%;
+          padding: 0px;
+          margin: auto;
+        }
+
+        input::placeholder {
+          color: #777;
+        }
+
+        .ant-input-affix-wrapper {
+          border-radius: 5px;
+          font-size: 18px;
+        }
+
+        .ant-input-affix-wrapper > input.ant-input {
+          font-size: 15px !important;
+          padding-left: 3px !important;
+        }
+      }
+
+      .already {
+        width: 80%;
+        padding-left: 30px;
+        margin-top: 10px;
+
+        @media screen and(max-width: 599px) {
+          padding: 0;
+          margin-top: 10px;
+        }
+      }
+
+      .ant-btn-primary {
+        margin-top: 15px;
+        border-radius: 5px !important;
+        width: 100%;
+      }
+    }
+  }
+
+  .right-side-login {
+    background-color: white;
+    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    height: 70%;
+    @include center;
+
+    @media screen and (max-width: 599px) {
+      width: 100%;
+      height: 100vh;
+    }
+
+    @media (min-width: 600px) and (max-width: 1200px) {
+      width: 30%;
+      height: 70%;
+    }
+
+    div {
+      h1 {
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      label {
+        padding-left: 5px;
+        color: #999;
+      }
+    }
+
+    #register {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 20px;
+      padding: 10px 0px;
+
+      @media screen and (max-width: 599px) {
+        padding: 0;
+      }
+
+      h2 {
+        padding-bottom: 20px;
+        font-size: 18px;
+      }
+
+      .ant-row,
+      .ant-form-item,
+      .ant-form-item-has-success {
+        width: 410px;
+        font-size: 16px;
+
+        @media screen and (max-width: 599px) {
+          width: 98%;
+        }
+      }
+
+      .ant-form-item {
+        margin-bottom: 10px !important;
+        border-radius: 25px !important;
+
+        .ant-col,
+        .ant-form-item-control,
+        .ant-col-xs-24,
+        .ant-col-sm-16 {
+          width: 100%;
+          padding: 0px;
+          margin: auto;
+        }
+
+        input::placeholder {
+          color: #777;
+        }
+
+        .ant-input-affix-wrapper {
+          border-radius: 5px;
+          font-size: 18px;
+        }
+
+        .ant-input-affix-wrapper > input.ant-input {
+          font-size: 15px !important;
+          padding-left: 3px !important;
+        }
+      }
+
+      .already {
+        width: 80%;
+        padding-top: 10px;
+        padding-left: 30px;
+        margin: auto;
+
+        @media screen and(max-width: 599px) {
+          width: 100%;
+          padding-top: 10px;
+          margin-left: -20px;
+        }
+      }
+
+      .login-form-forgot {
+        margin-left: 60px;
+        font-size: 15px;
+
+        @media screen and(max-width: 599px) {
+          margin-left: 50px;
+        }
+      }
+
+      .ant-btn-primary {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        border-radius: 5px !important;
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* End of register page stylesheet */
+
+/* Header Section */
+.headerShadow {
+  background-color: white;
+  width: 100%;
+  margin-top: -80px;
+  box-shadow: 0px 2px 2px 0px #eee;
+  position: fixed;
+  z-index: 99;
+
+  .container {
+    max-width: 700px;
+    margin: auto;
+
+    @media screen and (max-width: 599px) {
+      margin: 3px;
+    }
+
+    header {
+      height: 70px;
+      @media screen and (max-width: 599px) {
+        height: 60px;
+      }
+    }
+
+    header .container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      height: 100%;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    .logo {
+      h3 {
+        margin-top: 10px;
+        margin-left: 10px;
+        font-weight: 500;
+
+        @media screen and(max-width: 599px) {
+          margin-left: 3px;
+        }
+
+        .first-letter {
+          background: rgb(26, 119, 241);
+          color: white;
+          padding: 2px 5px;
+          margin-right: 2px;
+          border-radius: 3px;
+        }
+      }
+    }
+
+    .user {
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        margin-top: 16px;
+        margin-right: 7px;
+        font-size: 15px;
+      }
+
+      .avatar {
+        border: 1.5px solid #eee;
+        border-radius: 50%;
+        cursor: pointer;
+        &:hover {
+          filter: brightness(105%);
+        }
+      }
+
+      @media (min-width: 600px) and (max-width: 899px) {
+        margin-left: 1rem;
+        font-size: 25px;
+      }
+
+      @media (max-width: 599px) {
+        margin-left: 1rem;
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+.spanDiv {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+
+  span {
+    cursor: pointer;
+  }
+}
+
+.userDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  img {
+    border-radius: 50%;
+  }
+
+  .uploadBtn {
+    align-self: center;
+    margin-top: -15px;
+    border-radius: 50%;
+    border: none;
+    background: rgb(247, 244, 244);
+  }
+
+  h3 {
+    align-self: center;
+    margin-top: 7px;
+  }
+}
+
+.formDiv {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 40px;
+
+  .textareaDiv {
+    width: 100%;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+
+    @media screen and(max-width: 599px) {
+      flex-direction: column;
+    }
+
+    .label {
+      font-weight: bold;
+      margin-top: 5px;
+      margin-right: 10px;
+
+      @media screen and(max-width: 599px) {
+        margin-bottom: 5px;
+      }
+    }
+
+    textarea {
+      height: auto;
+      width: 400px;
+      resize: none;
+      margin-left: 18px;
+      border: none;
+      border: 1.5px solid #ccc;
+      border-radius: 3px;
+      padding: 5px;
+
+      @media screen and(max-width: 599px) {
+        width: 100%;
+        margin-left: 0px;
+      }
+    }
+  }
+
+  .inputDiv {
+    width: 100%;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+
+    @media screen and(max-width: 599px) {
+      flex-direction: column;
+    }
+
+    .label {
+      font-weight: bold;
+      margin-top: 5px;
+      margin-right: 10px;
+
+      @media screen and(max-width: 599px) {
+        margin-bottom: 5px;
+      }
+    }
+
+    input {
+      height: auto;
+      width: 400px;
+      border: none;
+      border: 1.5px solid #ccc;
+      border-radius: 3px;
+      padding: 5px;
+
+      @media screen and(max-width: 599px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .btnDiv {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 18px;
+  }
+}
+
+/* End of Header Section */
+
+/* ================================================ */
+
+/* Post Controls Section */
+.post-controls {
+  width: 100%;
+  margin-top: 80px;
+  z-index: 99;
+  border-radius: 5px;
+
+  .container {
+    max-width: 700px;
+    margin: auto;
+    padding: 4px;
+
+    .post-div {
+      display: flex;
+      cursor: pointer;
+      width: 100%;
+      height: 50px;
+      border-radius: 5px;
+      resize: none;
+      padding-top: 13px;
+      padding-left: 10px;
+      border: none;
+      background-color: white;
+      box-shadow: 0px 2px 2px 0px #eee;
+
+      .happy-emoji {
+        height: 100%;
+        margin-top: -2px;
+        overflow: hidden;
+        filter: brightness(110%);
+      }
+
+      label {
+        padding-left: 10px;
+        margin-left: 0px;
+        margin-top: 2px;
+      }
+    }
+  }
+}
+/* End of Post Controls Section */
+
+/* ================================================ */
+
+/* Users Component Styles */
+.all-users {
+  width: 100%;
+  margin-top: 5px;
+  z-index: 99;
+
+  .container {
+    max-width: 690px;
+    background-color: white;
+    border-radius: 3px;
+    margin: auto;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    box-shadow: 0px 2px 2px 0px #eee;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #fff;
+      border-radius: 10px;
+    }
+
+    .cards {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      padding: 10px;
+      margin-left: 5px;
+      margin-right: 5px;
+
+      div {
+        display: flex;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: auto;
+        height: 100%;
+
+        .card {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-right: 20px;
+          width: 80px;
+          height: 40px;
+
+          .userAvatar {
+            margin-bottom: 2px;
+            img {
+              border-radius: 50%;
+              align-self: center;
+            }
+          }
+
+          .username {
+            font-size: 13.5px;
+          }
+        }
+      }
+    }
+  }
+}
+/* End of the styles */
+
+/* ================================================ */
+
+/* Posts Section */
+
+.post-container {
+  width: 100%;
+  margin: 20px 0px;
+  border-radius: 5px;
+
+  .container {
+    max-width: 700px;
+    margin: auto;
+    padding: 4px;
+
+    .cards {
+      border-radius: 5px;
+      margin-top: -15px;
+      margin-bottom: 20px;
+
+      h4 {
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+      }
+
+      .ant-card,
+      .ant-card-bordered,
+      .ant-card-type-inner {
+        margin-bottom: 15px;
+      }
+
+      .ant-card-bordered {
+        border: 1px solid rgb(223, 223, 223);
+        border-radius: 3px;
+      }
+
+      .ant-card-type-inner {
+        .ant-card-head {
+          background-color: rgb(255, 255, 255);
+        }
+      }
+
+      .ant-card-head-title {
+        height: 60px;
+        position: absolute;
+        left: 15px;
+
+        img {
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+
+      .ant-card-extra {
+        div {
+          .post-date {
+            position: absolute;
+            left: 65px;
+            top: 32px;
+            color: #888;
+            font-weight: normal;
+            font-size: 13px;
+          }
+
+          .dropdown-btn {
+            margin-right: -15px;
+            border: none;
+            border-radius: 50%;
+            background-color: transparent;
+
+            &:hover {
+              border: 1.5px solid steelblue;
+            }
+          }
+        }
+      }
+
+      .ant-card-body {
+        padding: 5px;
+
+        .post-img {
+          width: 100%;
+          height: 350px;
+          object-fit: cover;
+          cursor: pointer;
+          transition: 3s all ease-in-out;
+
+          &:hover {
+            transform: scale(1.5);
+          }
+
+          @media screen and(max-width: 599px) {
+            height: 250px;
+          }
+        }
+
+        .post-description {
+          width: 100%;
+          margin-top: 15px;
+          margin-left: 7px;
+          margin-bottom: 10px;
+        }
+
+        .ant-card-footer {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-top: 1.2px solid #ccc;
+          margin-top: 20px;
+
+          .like-btn {
+            border-radius: 5px;
+            margin-top: 5px;
+            margin-left: 10px;
+
+            &:hover {
+              border-color: #e74c3c;
+              color: #e74c3c;
+            }
+
+            &:focus {
+              border-color: #e74c3c;
+              color: #e74c3c;
+            }
+          }
+
+          .save-btn {
+            border-radius: 5px;
+            margin-top: 5px;
+            margin-left: 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* End of Home page stylesheet */
